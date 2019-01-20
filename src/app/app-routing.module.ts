@@ -9,14 +9,14 @@ import { PendingclientComponent } from './pendingclient/pendingclient.component'
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: MainpageComponent},
-  { path: 'myinfo', component: MyinfoComponent},
-  { path: 'clients', component: ClientsComponent},
-  { path: 'pendingclients', component: PendingclientComponent}, 
+  { path: '#/myinfo', component: MyinfoComponent},
+  { path: '#/clients', component: ClientsComponent},
+  { path: '#/pendingclients', component: PendingclientComponent}, 
 ]
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {useHash: true}),
   ],
   exports: [RouterModule],
 })
